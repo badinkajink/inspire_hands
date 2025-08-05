@@ -2,12 +2,6 @@
 requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-enable-legacy-editable = false
-
-[tool.setuptools.packages.find]
-where = ["src"]
-
 [project]
 name = "inspire_hand"
 version = "0.1.0"
@@ -28,8 +22,14 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/inspire_hand"
-"Bug Tracker" = "https://github.com/yourusername/inspire_hand/issues"
+Homepage = "https://github.com/yourusername/inspire_hand"
+Bug Tracker = "https://github.com/yourusername/inspire_hand/issues"
 
 [project.scripts]
-inspire-hand = "inspire_hand.cli:main" 
+inspire-hand = "inspire_hand.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
