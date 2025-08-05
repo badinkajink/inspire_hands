@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=64", "wheel"]
+requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -22,14 +22,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/inspire_hand"
-Bug Tracker = "https://github.com/yourusername/inspire_hand/issues"
+"Homepage" = "https://github.com/yourusername/inspire_hand"
+"Bug Tracker" = "https://github.com/yourusername/inspire_hand/issues"
 
 [project.scripts]
-inspire-hand = "inspire_hand.cli:main"
-
-[tool.setuptools]
-package-dir = {"" = "src"}
-
-[tool.setuptools.packages.find]
-where = ["src"]
+inspire-hand = "inspire_hand.cli:main" 
