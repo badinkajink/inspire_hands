@@ -1,6 +1,12 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+enable-legacy-editable = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [project]
 name = "inspire_hand"
