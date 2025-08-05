@@ -33,6 +33,7 @@ class ModbusClient:
         self.slave_id = slave_id
         self.ser = None
         self.debug = False
+        self.write_latency = 0.006  # Default write latency in seconds
     
     def connect(self) -> bool:
         """
@@ -126,7 +127,7 @@ class ModbusClient:
         
         try:
             self.ser.write(packet)
-            time.sleep(0.2)  # Wait for response
+            time.sleep(self.write_latency)  # Wait for response
             
             # Check for response
             if self.ser.in_waiting:
@@ -189,7 +190,7 @@ class ModbusClient:
         
         try:
             self.ser.write(packet)
-            time.sleep(0.2)  # Wait for response
+            time.sleep(self.write_latency)  # Wait for response
             
             # Check for response
             if self.ser.in_waiting:
@@ -253,7 +254,7 @@ class ModbusClient:
         
         try:
             self.ser.write(packet)
-            time.sleep(0.2)  # Wait for response
+            time.sleep(self.write_latency)  # Wait for response
             
             # Check for response
             if self.ser.in_waiting:
