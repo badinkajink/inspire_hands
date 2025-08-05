@@ -33,7 +33,7 @@ class ModbusClient:
         self.slave_id = slave_id
         self.ser = None
         self.debug = False
-        self.write_latency = 0.005  # Default write latency in seconds
+        self.write_latency = 0.0055  # Default write latency in seconds
     
     def connect(self) -> bool:
         """
